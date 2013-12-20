@@ -11,14 +11,15 @@ class CreateTrailersTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::make('trailers', function($table){
+		Schema::create('trailers', function($table){
 			$table->increments('id');
 			$table->string('name', 256);
-			$table->text('description');
-			$table->string('city', 100);
+			$table->text('description');			
 			$table->string('country', 100);
 			$table->string('address1', 256);
 			$table->string('address2', 100);
+			$table->string('city', 100);
+			$table->string('state', 5);
 			$table->string('phone', 20);
 			$table->string('website', 256);
 			$table->string('twitter', 100);

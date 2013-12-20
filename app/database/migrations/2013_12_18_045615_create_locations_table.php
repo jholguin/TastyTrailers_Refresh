@@ -11,7 +11,7 @@ class CreateLocationsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::make('locations', function($table){
+		Schema::create('locations', function($table){
 			$table->increments('id');
 			$table->string('lat', 50);
 			$table->string('lng', 50);

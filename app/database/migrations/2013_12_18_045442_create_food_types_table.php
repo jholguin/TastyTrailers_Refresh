@@ -11,7 +11,7 @@ class CreateFoodTypesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::make('food_types', function($table){
+		Schema::create('food_types', function($table){
 			$table->increments('id');
 			$table->string('food_type', 100);
 		});
